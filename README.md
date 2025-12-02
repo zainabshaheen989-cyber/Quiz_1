@@ -1,8 +1,12 @@
 # Welcome to My To-Do List App
 
-A modern **React Native To-Do List application** built with **Expo**, designed to help you stay organized. Add tasks, set optional reminders, and visually track them with colored indicators.  
+A modern React Native To-Do List application built with **Expo**, designed to help you stay organized. Add tasks, set optional reminders, and visually track them with colored indicators.
+
+---
 
 ## 🗂️ File Structure
+
+
 To_Do_List/
 ├── backend/
 │ ├── server.js # Node.js Express backend
@@ -16,9 +20,9 @@ To_Do_List/
 ├── tsconfig.json # TypeScript config
 ├── README.md # Project README
 └── screenshots/ # Screenshots for README
- ├── task-list.png
- └── enter-task.png
- └── add-task.png
+├── task-list.png
+├── enter-task.png
+└── add-task.png
 
 ## 🌟 Features
 
