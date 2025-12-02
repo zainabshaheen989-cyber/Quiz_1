@@ -2,7 +2,23 @@
 
 A modern **React Native To-Do List application** built with **Expo**, designed to help you stay organized. Add tasks, set optional reminders, and visually track them with colored indicators.  
 
----
+## 🗂️ File Structure
+To_Do_List/
+├── backend/
+│ ├── server.js # Node.js Express backend
+│ └── package.json # Backend dependencies
+└── frontend/
+├── app/
+│ └── index.js # Main frontend screen
+├── App.js # Expo entry point
+├── app.json # Expo project config
+├── package.json # Frontend dependencies
+├── tsconfig.json # TypeScript config
+├── README.md # Project README
+└── screenshots/ # Screenshots for README
+ ├── task-list.png
+ └── enter-task.png
+ └── add-task.png
 
 ## 🌟 Features
 
@@ -23,102 +39,81 @@ A modern **React Native To-Do List application** built with **Expo**, designed t
 
 ---
 
-## ⚡ Installation
+## **Setup and Installation**
 
-### Prerequisites
-
-- Node.js installed
-- Expo CLI installed globally:
-
+### **Prerequisites**
+- Node.js (v16 or higher)  
+- npm or yarn  
+- Expo CLI:  
 ```bash
 npm install -g expo-cli
-Android Emulator or physical device for testing
 
-Steps
-Clone the repository:
+## Backend Setup
 
-bash
-Copy code
-git clone <your-repo-url>
-cd To_Do_List/frontend
+Navigate to backend folder:
+cd backend
+
 Install dependencies:
-
-bash
-Copy code
 npm install
-Start the Expo project:
 
-bash
-Copy code
-expo start
-Open the app on Android Emulator (press a) or scan the QR code using Expo Go on a physical device.
-
-Note: For iOS, use expo start and scan with Expo Go on an iPhone.
-
-🔧 Backend Setup
-Navigate to the backend folder:
-
-bash
-Copy code
-cd ../backend
-Install dependencies:
-
-bash
-Copy code
-npm install
-Start the backend server:
-
-bash
-Copy code
+Start backend server:
 node server.js
-Ensure the backend server is running at:
 
-arduino
-Copy code
-http://localhost:3000
-For Android Emulator, the frontend uses http://10.0.2.2:3000 to connect to the backend.
+The server will run on http://localhost:3000
+
+## Frontend Setup
+
+Navigate to frontend folder:
+cd frontend
+
+Install frontend dependencies:
+npm install
+
+Start the Expo development server:
+npx expo start
 
 🚀 Usage
 Open the app in Expo Go or emulator.
-
 Enter a task in “Add a new task” field.
-
 Optionally, set a reminder in “Set reminder (HH:MM)” field.
-
 Press Add Task.
-
-Tasks appear below with colored left indicators.
-
 Delete a task by pressing the ❌ button.
 
-🗂️ File Structure
-pgsql
-Copy code
-To_Do_List/
-├── backend/
-│   ├── server.js
-│   └── package.json
-└── frontend/
-    ├── app/
-    │   └── index.js
-    ├── package.json
-    └── tsconfig.json
-🛠 Dependencies
-React Native
+## Running the Application
+Open Android Emulator, iOS Simulator, or Expo Go app to run the frontend.
+Press w for Web, i for iOS simulator, a for Android emulator in Expo CLI.
 
-Expo
-
-react hooks: useState, useEffect
-
-react-native core components
+## Platform-specific Backend URL
+Android Emulator: http://10.0.2.2:3000
+iOS Simulator: http://localhost:3000
+Web/Other: http://localhost:3000
+Modify the backend URL in app/index.js if needed.
 
 🌈 Future Improvements
 Task completion toggle (complete/incomplete)
-
 Swipe-to-delete functionality
-
 Push notifications for reminders
-
 Persist tasks using a database (MongoDB / SQLite)
-
 Dark mode support
+
+## Troubleshooting
+Backend not connecting: Make sure backend server is running on port 3000
+Port already in use: Kill Node.js processes:
+taskkill /F /IM node.exe
+Expo CLI issues: Clear cache:
+npx expo start --clear
+
+Development Notes
+Frontend: React Native components in app/
+Backend: Express.js server with in-memory storage (for demo)
+Styling: React Native StyleSheet API
+Extend backend API in backend/server.js
+Modify frontend design in app/index.js
+
+Technologies Used
+Frontend: React Native, Expo
+Backend: Node.js, Express.js, CORS
+Development: Expo CLI, npm
+
+License
+This project is for educational purposes.
