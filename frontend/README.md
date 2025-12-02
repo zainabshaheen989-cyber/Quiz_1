@@ -54,10 +54,13 @@ To_Do_List/
 - Node.js (v16 or higher)  
 - npm or yarn  
 - Expo CLI:  
+```bash
 npm install -g expo-cli
+````
 
 ### Backend Setup
 
+```bash
 cd backend
 npm install
 node server.js
@@ -67,6 +70,7 @@ The server will run on [http://localhost:3000](http://localhost:3000)
 
 ### Frontend Setup
 
+```bash
 cd frontend
 npm install
 npx expo start
